@@ -257,7 +257,7 @@ export default function App() {
                 style={{
                   textAlign: "center",
                   marginTop: "30px",
-                  color: "lime",
+                  color: "#f26d6b",
                   fontSize: "32px",
                 }}
               >
