@@ -80,11 +80,6 @@ button {
   text-align: center;
 }
 
-.pie-row .pie-wrap > div {
-  background: red;
-  margin: 0 auto;
-}
-
 @media only screen and (max-width: 768px) {
   body {
     background-color: black;

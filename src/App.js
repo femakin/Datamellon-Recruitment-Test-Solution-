@@ -53,7 +53,7 @@ export default function App() {
         method: "post",
         url: "https://g54qw205uk.execute-api.eu-west-1.amazonaws.com/DEV/stub",
         data: { angular_test: "angular_developer" },
-        responseType: "stream",
+        // responseType: "stream",
       });
 
       setItemData(
@@ -138,9 +138,9 @@ export default function App() {
       setLoading(false);
     }
   };
-
+  // eslint-disable-next-line
   useEffect(
-    React.useCallback(() => fetchData(), []),
+    React.useCallback(() => fetchData(), []), // eslint-disable-line react-hooks/exhaustive-deps
     []
   );
 
@@ -157,7 +157,7 @@ export default function App() {
             <h1
               style={{ color: "GrayText", fontSize: "22px", marginTop: "30px" }}
             >
-              Please hold on! Data loading...
+              Please hold on! Data loading... This may take up to few seconds 🤦‍♂️
             </h1>
             <div
               style={{
@@ -190,7 +190,9 @@ export default function App() {
                     id="selectList"
                   >
                     {states.map((state, index) => (
-                      <option value={state}>{state}</option>
+                      <option key={index} value={state}>
+                        {state}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -210,7 +212,9 @@ export default function App() {
                     id="selectList"
                   >
                     {segments.map((state, index) => (
-                      <option value={state}>{state}</option>
+                      <option key={index} value={state}>
+                        {state}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -230,7 +234,9 @@ export default function App() {
                     id="selectList"
                   >
                     {category.map((state, index) => (
-                      <option value={state}>{state}</option>
+                      <option key={index} value={state}>
+                        {state}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -255,10 +261,10 @@ export default function App() {
                   fontSize: "32px",
                 }}
               >
-                <text>
+                <h4>
                   No Product found for this filter criteria. Please use the
                   dropdown above
-                </text>
+                </h4>
               </div>
             ) : (
               <>
