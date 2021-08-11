@@ -157,7 +157,11 @@ export default function App() {
             <h1
               style={{ color: "GrayText", fontSize: "22px", marginTop: "30px" }}
             >
-              Please hold on! Data loading... This may take up to few seconds 🤦‍♂️
+              Please hold on! Data loading... This may take up to few seconds 🤦‍♂️{" "}
+              <br />{" "}
+              <span style={{ color: "red" }}>
+                Please, Best desktop view presently.
+              </span>
             </h1>
             <div
               style={{
@@ -270,7 +274,10 @@ export default function App() {
               <>
                 {" "}
                 <div className="chart">
-                  <h3 className="chartTitle">BarChart</h3>
+                  <h3 className="chartTitle">
+                    This BarChart <br /> was plotted using <br /> ProductName,
+                    Profit, Sales and Quantity{" "}
+                  </h3>
                   <ResponsiveContainer width="100%" aspect={4 / 1}>
                     <BarChart
                       width={1001}
@@ -305,7 +312,11 @@ export default function App() {
                   </ResponsiveContainer>
                 </div>
                 <div className="chart">
-                  <h3 className="chartTitle">PieChart</h3>
+                  <h3 className="chartTitle">
+                    {" "}
+                    This PieChart <br /> was plotted using <br /> ProductName,
+                    and The Available Sales
+                  </h3>
                   <ResponsiveContainer width="200%" aspect={4 / 1}>
                     <PieChart width={900} height={900}>
                       <Pie
@@ -327,7 +338,10 @@ export default function App() {
                   </ResponsiveContainer>
                 </div>
                 <div className="chart">
-                  <h3 className="chartTitle">ScatterChart </h3>
+                  <h3 className="chartTitle">
+                    This ScatterChart <br /> was Plotted Using <br /> Sales and
+                    Profit{" "}
+                  </h3>
                   <ResponsiveContainer width="100%" aspect={4 / 1}>
                     <ScatterChart
                       width={400}
